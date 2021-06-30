@@ -5,7 +5,6 @@ module.exports = {
     author: "Lawrence Wang",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-netlify",
     "gatsby-plugin-sass",
     "gatsby-plugin-postcss",
@@ -41,6 +40,30 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: "./src/content/posts/",
+      },
+      __key: "posts",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: "./src/content/projects/",
+      },
+      __key: "projects",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "art",
+        path: "./static/artimages/",
+      },
+      __key: "art",
     },
     {
       resolve: `gatsby-transformer-remark`,
