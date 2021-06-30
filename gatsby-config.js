@@ -1,10 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: "Lawrence Wang",
+    description: "Personal site for Lawrence Wang, currently a student at Yale University, intereted in art, economics, and computer science, aspiring to become a designer and developer for the world wide web.",
+    author: "Lawrence Wang",
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-netlify",
     "gatsby-plugin-sass",
+    "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -16,7 +20,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.ico",
       },
     },
     "gatsby-plugin-mdx",
@@ -37,6 +41,26 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              staticFolderName: 'static',
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1600,
+            },
+          },
+          'gatsby-remark-static-images'
+        ],
+      },
     },
   ],
 };
