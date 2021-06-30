@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
-import Post from "../components/projectpostmodule"
 
 // import "../styles/projectgrid.scss"
 
@@ -18,28 +17,30 @@ const ProjectPostTemplate = ({ data, pageContext }) => {
 
     return (
         <Layout>
-          <SEO title={title.replace("&#58;", ":").replace("&amp;", "&")} description={autoExcerpt} />
+        <SEO title={title.replace("&#58;", ":").replace("&amp;", "&")} description={autoExcerpt} />
 
-            <div className="projectgrid">
-                <div className="projectgrid-content">
-                    <Post
-                        key={id}
-                        title={title}
-                        date={updated}
-                        path={permalink}
-                        coverimage={coverimage.absolutePath}
-                        html={html}
-                        link={link} 
-                    />
+            <article className="project">
+                <div className="projectarea">
+                    <div className="projectheading">
+                        <div className="projecttitle">{title.replace("&#58;", ":").replace("&amp;", "&")}</div>
+                    </div>
+
+                    <div className="projectcontent">
+                        <div dangerouslySetInnerHTML={{ __html: html }} />
+                    </div>
                 </div>
-            </div>
+                <div className="projectlinkto">
+                    <a href={link} target="_blank" rel="noreferrer">See It in Action</a>
+                </div>
+            </article>
+
         </Layout>
     )
 }
 
 export default ProjectPostTemplate
 
-export const postQuery = graphql `
+export const postQuery = graphql`
     query ProjectPostQuery ($path: String) {
         markdownRemark(frontmatter: { permalink: { eq: $path } }) {
             frontmatter {

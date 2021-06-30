@@ -57,22 +57,3 @@ const ProjectPage = () => {
 }
 
 export default ProjectPage
-
-// export const ProjectPageQuery = graphql`
-//   query ProjectPageQuery {
-//       allMarkdownRemark (
-//           filter: { frontmatter: { type: {eq: "project"}, published: {eq: true}, casestudy: {eq: true} } }
-//           sort: { fields: [frontmatter___updated] order: DESC }
-//       ) {
-//           edges {
-//               node {
-//                   frontmatter {
-//                       title
-//                       permalink
-//                   }
-//                   id
-//               }
-//           }
-//       }
-//   }
-// `

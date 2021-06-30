@@ -1,9 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
-import Post from "../components/blogpostmodule"
 
 // import "../styles/bloggrid.scss"
 
@@ -16,24 +15,37 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     } = data.markdownRemark
     const { next, previous } = pageContext
 
+    
+    let postNavigation
+    if (previous==null) {
+        postNavigation = <Link to={next.frontmatter.permalink}>{next.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}  &raquo;</Link>
+    } else if (next==null) {
+        postNavigation = <Link to={previous.frontmatter.permalink}>&laquo; {previous.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}</Link>
+    } else {
+        postNavigation = <div><Link to={previous.frontmatter.permalink}>&laquo; {previous.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}</Link> <Link to={next.frontmatter.permalink}>{next.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}  &raquo;</Link></div>
+    }
+
     return (
         <Layout>
           <SEO title={title.replace("&#58;", ":").replace("&amp;", "&")} description={autoExcerpt} />
+            
+            <article className="post">
+                <div className="postheading">
+                    <div>{title.replace("&#58;", ":").replace("&amp;", "&")}</div>
+                    <span>{updated}</span>
+                    <span> in </span>
+                    <span>{category}</span>
+                </div>
 
-            <div className="bloggrid-content-post">
-            <Post
-                key={id}
-                title={title}
-                date={updated}
-                path={permalink}
-                // coverImage={coverImage}
-                html={html}
-                tag={tag}
-                category={category}
-                previousPost={previous}
-                nextPost={next}
-            />
-            </div>
+                <div className="postcontent">
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                </div>
+
+                <div className="postnavigation">
+                    {postNavigation}
+                </div>
+            </article>
+
         </Layout>
     )
 }

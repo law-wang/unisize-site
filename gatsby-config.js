@@ -66,6 +66,14 @@ module.exports = {
       __key: "art",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "static",
+        path: "./static/",
+      },
+      __key: "static",
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
