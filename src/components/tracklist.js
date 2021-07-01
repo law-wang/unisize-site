@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react"
 
-// import "../styles/index.scss"
-
 const Tracklist = () => {
 
-    const client_id = 'fe75f206e45d40dc81c0e21dfba40054'
-    const client_secret = '21068bd3ec2e48d2bc4fa04fdd8d7fba'
+    const client_id = process.env.GATSBY_TRACKLIST_ID
+    const client_secret = process.env.GATSBY_TRACKLIST_SECRET
     var Buffer = require('buffer/').Buffer
     const [tracks, setTrack] = useState([])
 
@@ -37,12 +35,10 @@ const Tracklist = () => {
         setTrack(track.items)
     }, [])
 
-    console.log(tracks)
-
     return (
-        <div className="playlist">
+        <div id="playlist">
             {tracks.slice(0, 10).map((item, index) => (
-                <div className="track" key={index}>
+                <div key={index}>
                     <a href={item.track.external_urls.spotify} target="_blank" rel="noopener noreferrer">{item.track.name}</a>
                 </div>
             ))}
