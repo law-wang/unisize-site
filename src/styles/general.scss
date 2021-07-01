@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$backgroundColor: #f2f2f2;
+$bodyColor: #000000;
+$accentColor: #5B83A9;
+$bodyFont: "Inter", sans-serif;
+
+// GENERAL STYLES ****************************************************
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    &::before, &::after {
+      box-sizing: border-box;
+    }
+    -webkit-tap-highlight-color: $bodyColor; 
+    font-size: 20px;
+}
+
+::-moz-selection {
+    background-color: $accentColor;
+}
+::selection { 
+    background-color: $accentColor;
+}
+
+a {
+    text-decoration: none;
+    color: $bodyColor;
+}
+
+button {
+    -webkit-appearance: none;
+    border: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: $bodyFont;
+    background-color: transparent;
+}
+
+@media (hover: hover) {
+    a:hover {
+        text-decoration: underline;
+    }
+    button:hover {
+        text-decoration: underline;
+    }
+}
+
+// LAYOUT STYLES ****************************************************
+
+body {
+    color: $bodyColor;
+    font-family: $bodyFont;
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    margin-bottom: 40px;
+    div:first-child button {
+        padding-left: 20px;
+    }
+    .navigation {
+        display: flex;
+        div:not(:first-child) {
+            padding-left: 20px;
+        }
+    }
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -999;
+    top: 0;
+    left: 0;
+    background: linear-gradient($accentColor 0%, $backgroundColor 90%);
+}
+
+.container {
+    max-width: 700px;
+    min-height: 100vh;
+    margin: 10px;
+}
+
+// MARKDOWN STYLES ****************************************************
+
+blockquote {
+    border-left: 2px solid black;
+    padding: 0 10px
+}
+a.footnote-ref {
+    margin-left: 0px;
+    text-decoration: none !important; 
+}
+.footnotes {
+    ol {
+        padding-left: 20px;
+    }
+    ol li p {
+        margin-bottom: 0;
+    }
+}

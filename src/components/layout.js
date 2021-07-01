@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 import AboutBlock from "./about"
 
-// import "../../styles/general.scss"
+import "../styles/general.scss"
 
 const Layout = ({ children }) => {
 
@@ -18,37 +18,36 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div className="overall">
-      <div className="container">
+    <div className="container">
 
-        <header>
+      <div className="background"></div>
+
+      <header>
+        <div>
+          <Link to="/"><b>Lawrence Wang</b></Link>
+          <button onClick={showAbout}>
+            About
+          </button>
+        </div>
+
+        <div className="navigation">
           <div>
-            <Link to="/">Lawrence Wang</Link>
-            <button onClick={showAbout}>
-              <span class="mobilehide">INFO</span>
-              <span class="mobileshow">?</span>
-            </button>
+            <Link to="/portfolio">Portfolio</Link>
           </div>
-
-          <div className="navigation">
-            <div>
-              <Link to="/portfolio">Portfolio</Link>
-            </div>
-            &nbsp;
-            <div>
-              <Link to="/blog">Writing</Link>
-            </div>
-            &nbsp;
-            <div>
-              <Link to="/art/digital">Art</Link>
-            </div>
+          &nbsp;
+          <div>
+            <Link to="/blog">Writing</Link>
           </div>
-        </header>
+          &nbsp;
+          <div>
+            <Link to="/art/digital">Art</Link>
+          </div>
+        </div>
+      </header>
 
-        {children}
-        <AboutBlock />
+      {children}
+      <AboutBlock />
 
-      </div>
     </div>
   )
 }
