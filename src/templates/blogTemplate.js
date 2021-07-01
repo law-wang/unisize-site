@@ -4,9 +4,7 @@ import { Link, graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 
-// import "../styles/bloggrid.scss"
-
-const BlogPostTemplate = ({ data, pageContext }) => {
+const BlogTemplate = ({ data, pageContext }) => {
     const {
         frontmatter: { title, updated, permalink, tag, category },
         excerpt: autoExcerpt,
@@ -30,12 +28,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           <SEO title={title.replace("&#58;", ":").replace("&amp;", "&")} description={autoExcerpt} />
             
             <article className="post">
-                <div className="postheading">
-                    <div>{title.replace("&#58;", ":").replace("&amp;", "&")}</div>
-                    <span>{updated}</span>
-                    <span> in </span>
-                    <span>{category}</span>
-                </div>
+                <h1>{title.replace("&#58;", ":").replace("&amp;", "&")}</h1>
+                <span>{updated}</span>
+                <span> in </span>
+                <span>{category}</span>
 
                 <div className="postcontent">
                     <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -50,7 +46,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     )
 }
 
-export default BlogPostTemplate
+export default BlogTemplate
 
 export const postQuery = graphql `
     query BlogPostQuery ($path: String) {

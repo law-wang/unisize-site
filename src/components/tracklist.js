@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 
 const Tracklist = () => {
 
     const client_id = process.env.GATSBY_TRACKLIST_ID
     const client_secret = process.env.GATSBY_TRACKLIST_SECRET
+
     var Buffer = require('buffer/').Buffer
+    const loader = useRef(null)
     const [tracks, setTrack] = useState([])
 
     useEffect(async () => {
-
+        
         let urlencoded = new URLSearchParams();
         urlencoded.append("grant_type", "client_credentials");
 
@@ -33,10 +35,14 @@ const Tracklist = () => {
         track = await track.json()
 
         setTrack(track.items)
+        loader.current.style.display = "none"
+
     }, [])
 
     return (
         <div id="playlist">
+            <div id="loader" ref={loader}></div>
+
             {tracks.slice(0, 10).map((item, index) => (
                 <div key={index}>
                     <a href={item.track.external_urls.spotify} target="_blank" rel="noopener noreferrer">{item.track.name}</a>

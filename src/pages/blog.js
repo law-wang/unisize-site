@@ -32,7 +32,7 @@ const BlogPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <div className="blogcategorylist">
+      <section>
 
         {data.allMarkdownRemark.category.slice(0).reverse().map((category, index) => (
 
@@ -40,16 +40,16 @@ const BlogPage = () => {
             <h2>{category.fieldValue}</h2>
 
             {category.edges.map(post => (
-              <h4 key={post.node.id}>
+              <div key={post.node.id}>
                 <Link to={post.node.frontmatter.permalink}>{post.node.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}</Link>
-              </h4>
+              </div>
             ))}
 
           </div>
 
         ))}
 
-      </div>
+      </section>
 
     </Layout>
   )

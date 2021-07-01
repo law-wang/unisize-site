@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <section>
+    <main>
       
       <header>
         <div>
@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
       </div>
       
       <AboutBlock />
-    </section>
+    </main>
   )
 }
 

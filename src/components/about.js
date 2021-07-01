@@ -103,7 +103,7 @@ const BlogFeatured = () => {
     }
 
     return (
-        <main id="aboutblock" className="about">
+        <section id="aboutblock" className="about">
             <div className="about-nav">
                 <button onClick={closeAbout}>Close</button>
                 <div className="about-social">
@@ -122,7 +122,7 @@ const BlogFeatured = () => {
                 <span id="greeting">{greetingText}</span>
             </div>
             
-        </main>
+        </section>
     )
 }
 
