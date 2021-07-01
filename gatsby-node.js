@@ -78,15 +78,15 @@ exports.createPages = async ({ graphql, actions, getNodes }) => {
       })
     })
 
-    const art = yaml.load(fs.readFileSync("./src/content/art/art.yaml", "utf-8"))
-    art.forEach(element => {
-      createPage({
-        path: element.path,
-        component: artTemplate,
-        context: {
-          pageContent: element.content,
-          pageTitle: element.title,
-        },
-      })
-    })
+    // const art = yaml.load(fs.readFileSync("./src/content/art/art.yaml", "utf-8"))
+    // art.forEach(element => {
+    //   createPage({
+    //     path: element.path,
+    //     component: artTemplate,
+    //     context: {
+    //       pageContent: element.content,
+    //       pageTitle: element.title,
+    //     },
+    //   })
+    // })
 }
