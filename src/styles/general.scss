@@ -64,16 +64,23 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    padding: 10px;
     margin-bottom: 40px;
     div:first-child button {
         padding-left: 20px;
-    }
+    } 
     .navigation {
         display: flex;
         div:not(:first-child) {
             padding-left: 20px;
         }
     }
+    border-bottom: 2px solid black;
+    backdrop-filter: blur(20px);
 }
 
 .background {
@@ -89,7 +96,7 @@ header {
 .container {
     max-width: 700px;
     min-height: 100vh;
-    margin: 10px;
+    margin: 100px 10px 10px 10px;
 }
 
 // MARKDOWN STYLES ****************************************************

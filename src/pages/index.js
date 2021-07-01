@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import Tracklist from "../components/tracklist"
+import Tracklist from "../components/tracklist"
 
 // import "../styles/index.scss"
 
@@ -12,7 +12,7 @@ const IndexPage = () => (
     <div className="content">
       <div className="index-roll">
 
-        {/* <Tracklist /> */}
+        <Tracklist />
 
         <h2>For Fun</h2>
         <h4><a href="https://thoughts.rence.la/">Thoughts</a></h4>

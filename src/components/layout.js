@@ -18,10 +18,8 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div className="container">
-
-      <div className="background"></div>
-
+    <section>
+      
       <header>
         <div>
           <Link to="/"><b>Lawrence Wang</b></Link>
@@ -45,10 +43,16 @@ const Layout = ({ children }) => {
         </div>
       </header>
 
-      {children}
-      <AboutBlock />
+      <div className="background"></div>
 
-    </div>
+      <div className="container">
+
+        {children}
+
+      </div>
+      
+      <AboutBlock />
+    </section>
   )
 }
 
