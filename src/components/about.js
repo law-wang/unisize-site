@@ -107,7 +107,7 @@ const BlogFeatured = () => {
             <button onClick={closeAbout}>Close</button>
 
             <div>
-                I'm a student at &#x2609; Yale studying the intersection between computer science and design. I like basic things such as watching Chinese TV, making Spotify playlists, collecting song lyrics, and yelping. If you'd like to find out more about the interesting personality I never knew I had, you can check out my basic <i><Link to="/blog">opinions</Link></i>, my basic <i><Link to="/art/digital">art</Link></i>, or go find me &#x2197;&#xFE0E; while I get lost in space.
+                I'm a student at &#x2609; Yale studying the intersection between computer science and design. I like basic things such as watching Chinese TV, making Spotify playlists, collecting song lyrics, and yelping. If you'd like to find out more about the interesting personality I never knew I had, you can check out my basic <i><Link to="/blog">opinions</Link></i>, my basic <i><Link to="/art/digital">art</Link></i>, or go find me &#8601;&#xFE0E; while I get lost in space.
             </div>
 
             <div>
