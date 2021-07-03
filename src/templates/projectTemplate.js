@@ -4,8 +4,6 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 
-// import "../styles/projectgrid.scss"
-
 const ProjectPostTemplate = ({ data, pageContext }) => {
     const {
         frontmatter: { title, updated, permalink, timeframe, tools, coverimage, link },

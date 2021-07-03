@@ -2,7 +2,7 @@
 title: Russian Doll&#58; It's Hard to Stay Alive
 updated: 2019-06-24 23:43
 published: true
-category: Television
+category: Movie and TV
 tag: [Netflix]
 permalink: "/blog/russian-doll"
 type: post

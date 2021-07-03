@@ -2,7 +2,7 @@
 title: The Prestige&#58; Twisted Obsessions
 updated: 2018-04-04 14:16
 published: true
-category: Movie
+category: Movie and TV
 tag: [Christopher Nolan, Thriller]
 permalink: "/blog/the-prestige"
 type: post

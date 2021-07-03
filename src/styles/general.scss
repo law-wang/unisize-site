@@ -38,6 +38,9 @@ button {
     font-size: 20px;
     font-family: $bodyFont;
     background-color: transparent;
+    &:active {
+        color: $bodyColor;
+    }
 }
 
 @media (hover: hover) {
@@ -46,6 +49,7 @@ button {
     }
     button:hover {
         text-decoration: underline;
+        cursor: pointer;
     }
 }
 
@@ -76,7 +80,7 @@ header {
     padding: 10px;
     margin-bottom: 40px;
     div:first-child button {
-        padding-left: 20px;
+        margin-left: 20px;
     } 
     .navigation {
         display: flex;
@@ -106,13 +110,16 @@ header {
 }
 
 #loader {
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient($accentColor 0%, $backgroundColor 90%);
     z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient($accentColor 0%, $backgroundColor 90%);
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 // MARKDOWN STYLES ****************************************************
@@ -126,6 +133,10 @@ a.footnote-ref {
     text-decoration: none !important; 
 }
 .footnotes {
+    margin-top: 50px;
+    hr {
+        border: none;
+    }
     ol {
         padding-left: 20px;
     }
@@ -149,5 +160,17 @@ a.footnote-ref {
     }
     &:first-of-type {
         margin-top: 20px;
+    }
+}
+
+.category {
+    div {
+        display: flex;
+        a {
+            margin-left: 20px;
+        }
+        div {
+            font-feature-settings: "tnum";  
+        }
     }
 }

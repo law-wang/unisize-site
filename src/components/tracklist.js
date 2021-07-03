@@ -35,7 +35,11 @@ const Tracklist = () => {
         track = await track.json()
 
         setTrack(track.items)
-        loader.current.style.display = "none"
+        
+        loader.current.style.opacity = 0
+        setTimeout(() => {
+            loader.current.style.display = "none"
+        }, 500)
 
     }, [])
 

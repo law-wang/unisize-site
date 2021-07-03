@@ -21,6 +21,7 @@ const BlogPage = () => {
                         frontmatter {
                             title
                             permalink
+                            updated(formatString: "YYYY[/]MM[/]DD ")
                         }
                         id
                     }
@@ -41,7 +42,7 @@ const BlogPage = () => {
 
             {category.edges.map(post => (
               <div key={post.node.id}>
-                <Link to={post.node.frontmatter.permalink}>{post.node.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}</Link>
+                <div>{post.node.frontmatter.updated}</div> <Link to={post.node.frontmatter.permalink}>{post.node.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}</Link>
               </div>
             ))}
 

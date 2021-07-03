@@ -2,7 +2,7 @@
 title: Nocturnal Girl and Gone Animals&#58; A Comparison
 updated: 2018-07-22 19:41
 published: true
-category: Movie
+category: Movie and TV
 tag: [Tom Ford, David Fincher]
 permalink: "/blog/gone-girl-nocturnal-animals"
 type: post
