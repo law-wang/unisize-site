@@ -8,7 +8,6 @@ module.exports = {
     "gatsby-plugin-netlify",
     "gatsby-plugin-sass",
     "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -23,16 +22,21 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          layout: `constrained`,
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+        },
       },
-      __key: "images",
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -56,6 +60,30 @@ module.exports = {
         path: "./src/content/projects/",
       },
       __key: "projects",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "traditional",
+        path: `${__dirname}/static/artimages/traditional/`,
+      },
+      __key: "traditional",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "digital",
+        path: `${__dirname}/static/artimages/digital/`,
+      },
+      __key: "digital",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "design",
+        path: `${__dirname}/static/artimages/design/`,
+      },
+      __key: "design",
     },
     {
       resolve: "gatsby-source-filesystem",
