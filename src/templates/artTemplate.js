@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage  } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -59,36 +59,36 @@ const ArtTemplate = props => {
 
     let images = []
 
-    if (pageTitle == "Traditional") {
+    if (pageTitle === "Traditional") {
         images = traditional
-    } else if (pageTitle == "Design") {
+    } else if (pageTitle === "Design") {
         images = design.reverse()
-    } else if (pageTitle == "Digital") {
+    } else if (pageTitle === "Digital") {
         images = digital.reverse()
     }
 
     return (
         <Layout>
-        <SEO title={pageTitle}/>
-        
-          <section className="gallery">
-                  <div><Link to="/art/design">Design</Link></div>
-                  <div><Link to="/art/traditional">Traditional</Link></div>        
-                  <div><Link to="/art/digital">Digital</Link></div>
-  
-              <div className="gallery-container">
-                  {images.map((data, index) => (
-                      
-                    <div className="gallery-image" key={index}>
-                        <GatsbyImage image={data} alt={data.name} />
-                    </div>
-  
-                  ))}
-              </div>
-          </section>
-        
+            <SEO title={pageTitle} />
+
+            <section className="gallery">
+                <div><Link to="/art/design">Design</Link></div>
+                <div><Link to="/art/traditional">Traditional</Link></div>
+                <div><Link to="/art/digital">Digital</Link></div>
+
+                <div className="gallery-container">
+                    {images.map((data, index) => (
+
+                        <div className="gallery-image" key={index}>
+                            <GatsbyImage image={data} alt={data.name} />
+                        </div>
+
+                    ))}
+                </div>
+            </section>
+
         </Layout>
     )
 }
-  
+
 export default ArtTemplate

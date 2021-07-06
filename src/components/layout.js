@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
           </div>
           &nbsp;
           <div>
-            <Link to="/art/digital">Art</Link>
+            <Link to="/art/traditional">Art</Link>
           </div>
         </div>
       </header>

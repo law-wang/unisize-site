@@ -1,6 +1,6 @@
 ---
 title: Spotlist
-updated: 2020-08-01 18:53
+updated: 2020-12-31 18:53
 published: true
 category: Project
 tag: [Fun, "Featured Project"]

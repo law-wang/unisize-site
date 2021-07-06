@@ -4,7 +4,7 @@ updated: 2020-12-01 18:53
 published: true
 category: Project
 tag: [Fun, "Featured Project"]
-permalink: "/project/spotlist"
+permalink: "/project/breathe"
 type: project
 casestudy: false
 tagline: "Web Development"

@@ -6,30 +6,25 @@ import Layout from '../components/layout'
 
 const ProjectPostTemplate = ({ data, pageContext }) => {
     const {
-        frontmatter: { title, updated, permalink, timeframe, tools, coverimage, link },
+        frontmatter: { title, link },
         excerpt: autoExcerpt,
-        id,
         html,
     } = data.markdownRemark
-    const { next, previous } = pageContext
+    // const { next, previous } = pageContext
 
     return (
         <Layout>
-        <SEO title={title.replace("&#58;", ":").replace("&amp;", "&")} description={autoExcerpt} />
+            <SEO title={title.replace("&#58;", ":").replace("&amp;", "&")} description={autoExcerpt} />
 
             <article className="project">
-                <div className="projectarea">
-                    <div className="projectheading">
-                        <div className="projecttitle">{title.replace("&#58;", ":").replace("&amp;", "&")}</div>
-                    </div>
 
-                    <div className="projectcontent">
-                        <div dangerouslySetInnerHTML={{ __html: html }} />
-                    </div>
+                <h2>{title.replace("&#58;", ":").replace("&amp;", "&")}</h2>
+                <a href={link} target="_blank" rel="noreferrer">See It in Action &#x2197;</a>
+
+                <div className="projectcontent">
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
-                <div className="projectlinkto">
-                    <a href={link} target="_blank" rel="noreferrer">See It in Action</a>
-                </div>
+
             </article>
 
         </Layout>

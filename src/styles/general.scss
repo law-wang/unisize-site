@@ -189,3 +189,64 @@ a.footnote-ref {
 .gallery-image {
     margin: 20px 0;
 }
+
+// PROJECT STYLES ****************************************************
+
+.projectcontent {
+    img {
+        object-fit: cover;
+        padding-bottom: 5px !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        td, th {
+            border: 2px solid #000;
+            text-align: left;
+            padding: 8px;
+        }
+    }
+    .gt-showcase {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // width: 100%;
+        max-width: 700px;
+        margin: 20px 0 10px 10px;
+        height: 400px;
+        max-height: 100%;
+        img {
+            border-radius: 20px;
+        }
+        .gt-showcase-stat {
+            img {
+                width: auto;
+                height: 400px;
+                @media (max-width: 500px) {
+                    height: 250px;
+                }
+            }
+            // max-height: 100%;
+            // span {
+            //     height: 400px;
+            // }
+            // img {
+            //     object-fit: cover;
+            // }
+        }
+        .gt-showcase-gif {
+            img {
+                height: 400px;
+                width: auto;
+                @media (max-width: 500px) {
+                    height: 250px;
+                }
+            }
+        }
+        @media (max-width: 500px) {
+            height: 250px;
+        }
+    }
+}

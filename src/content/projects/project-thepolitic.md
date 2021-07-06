@@ -15,63 +15,36 @@ description: "As a part of The Yale Politic's Tech Team, I helped develop this m
 link: https://chiaski.github.io/politic-hopefuls/
 ---
 
-<div class="csblock" id="context"> 
-<span class="csblockheading">
-    Context
-</span>
-    As a critical election year neared, the <a href="https://thepolitic.org/" target="_blank" rel="noopener noreferrer">Yale Politic</a> wanted to chronicle their series of interviews over the past decade to offer more insight into the presidential candidates. The Tech Team was tasked with the creation of a minisite that would present the interviews in a meaningful and accessible way.
-</div>
+As a critical election year neared, the [Yale Politic](https://thepolitic.org/) wanted to chronicle their series of interviews over the past decade to offer more insight into the presidential candidates. The Tech Team was tasked with the creation of a minisite that would present the interviews in a meaningful and accessible way. 
 
-<div class="csblock" id="team"> 
-<span class="csblockheading">
-    Team
-</span>
-    Under the leadership of the <a href="https://chiaski.com/" target="_blank" rel="noopener noreferrer">team lead</a>, we aimed to expand readership for the magazine and build a template for future feature projects. Personally, I was responsible for the landing page design, as well as content and asset generation.
-</div>
+Under the leadership of the [team lead](https://chiaski.com/), we aimed to expand readership for the magazine and build a template for future feature projects. Personally, I was responsible for the landing page design, as well as content and asset generation.
 
 ![Politic Header](/projectimages/hopefulsheader.jpg)
 
-<div class="csblock" id="concept">  
-<span class="csblockheading">
-    Concept
-</span>
-    According to initial sketches, the landing page would showcase several prominent interviewees, with their photos and names, as well as an impactful presentation, which differed from The Politic’s usual, more muted style.
-</div>
+### Concept
+
+According to initial sketches, the landing page would showcase several prominent interviewees, with their photos and names, as well as an impactful presentation, which differed from The Politic’s usual, more muted style.
 
 ![Politic Sketches](/projectimages/.jpg)
 
-<div class="csblock" id="prototype"> 
-<span class="csblockheading">
-    Prototype
-</span>
-    The landing page was prototyped in Figma, originally featuring a large, bold font with black and white motif to capitalize on the preexisting design language of the magazine. In a similar vein, the candidate photos are prescribed a black and white treatment. To equalize and humanize the candidates, I conceived of the technique of blurring and adding grains to the portraits through Photoshop.
-</div>
+### Prototype
+The landing page was prototyped in Figma, originally featuring a large, bold font with black and white motif to capitalize on the preexisting design language of the magazine. In a similar vein, the candidate photos are prescribed a black and white treatment. To equalize and humanize the candidates, I conceived of the technique of blurring and adding grains to the portraits through Photoshop.
 
 ![Politic Prototype](/projectimages/hopefulsfigma.jpg)
 
-<div class="csblock" id="implementation"> 
-<span class="csblockheading">
-    Implementation
-</span>
-    With the goal of encouraging readers to go through all the content, we implemented a system of horizontal slider and vertical scrolling, such that all interviews with minimum clicks and scrolls. For typography, Canela was used for headings as it brings a kind of elegance different from the magazine’s usual Georgia, and Sailek was chosen for the body.
-</div>
+### Implementation
+
+With the goal of encouraging readers to go through all the content, we implemented a system of horizontal slider and vertical scrolling, such that all interviews with minimum clicks and scrolls. For typography, Canela was used for headings as it brings a kind of elegance different from the magazine’s usual Georgia, and Sailek was chosen for the body.
 
 ![Politic Final 1](/projectimages/hopefulstype.jpg)
 
-<div class="csblock" style="margin-top: 10px; margin-bottom: 10px;"> 
-    The site was developed with a mobile-first mindset to account for The Politic’s largely mobile readership. On mobile devices, clicking the fixed header brings up a list of all the candidates, allowing quick access without excessive scrolling. 
-</div>
+The site was developed with a mobile-first mindset to account for The Politic’s largely mobile readership. On mobile devices, clicking the fixed header brings up a list of all the candidates, allowing quick access without excessive scrolling. 
 
 ![Politic Final 2](/projectimages/hopefulsmobile.png)
 ![Politic Final 2](/projectimages/hopefulsbanner.jpg)
 ![Politic Final 3](/projectimages/hopefulslayout.png)
 
-<div class="csblock" id="results"> 
-<span class="csblockheading">
-    Results
-</span>
-    <ul style="margin-top: 5px;">
-        <li> <i>Learned the fundamentals of web development.</i> Introduced to prototyping with Figma, version control, and responsive design.
-        <li> <i>Practiced the process of design thinking.</i> From conceptualization to sketches to implementation, the process turned out to be a constant compromise between vision and usability, creativity and human-centered thinking.
-    </ul>
-</div>
+### Results
+
+* Learned the fundamentals of web development. Introduced to prototyping with Figma, version control, and responsive design.
+* Practiced the process of design thinking. From conceptualization to sketches to implementation, the process turned out to be a constant compromise between vision and usability, creativity and human-centered thinking.

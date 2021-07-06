@@ -6,9 +6,8 @@ import Layout from '../components/layout'
 
 const BlogTemplate = ({ data, pageContext }) => {
     const {
-        frontmatter: { title, updated, permalink, tag, category },
+        frontmatter: { title, updated, category },
         excerpt: autoExcerpt,
-        id,
         html,
     } = data.markdownRemark
     const { next, previous } = pageContext

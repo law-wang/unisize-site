@@ -24,7 +24,7 @@ const IndexPage = () => {
           }
       }
       project: allMarkdownRemark (
-        filter: { frontmatter: { type: {eq: "project"} } }
+        filter: { frontmatter: { type: {eq: "project"}, published: {eq: true} } }
         sort: { fields: [frontmatter___updated] order: DESC }
       ) {
           edges {
