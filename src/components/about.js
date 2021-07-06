@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 import "../styles/about.scss"
+import Tracklist from "./tracklist"
 
 const BlogFeatured = () => {
 
@@ -107,17 +108,29 @@ const BlogFeatured = () => {
             <button onClick={closeAbout}>Close</button>
 
             <div>
-                I'm a student at &#x2609; Yale studying the intersection between computer science and design. I like basic things such as watching Chinese TV, making Spotify playlists, collecting song lyrics, and yelping. If you'd like to find out more about the interesting personality I never knew I had, you can check out my basic <i><Link to="/blog">opinions</Link></i>, my basic <i><Link to="/art/digital">art</Link></i>, or go find me &#8601;&#xFE0E; while I get lost in space.
+                I started building things some time ago. Exploring the intersection between design and code makes me feel powerful, and implementing design to create meaningful and useful products is more fulfilling than plain art. The liberal arts&#8482; education at Yale has afforded me the opportunity to discover economics and political science as immensely interesting, although what I will do with them remains to be seen.
             </div>
 
             <div>
-                <a href="https://www.instagram.com/rencewang/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://www.linkedin.com/in/lawrence-c-w/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                {/* <a href="/">Resume</a> */}
+                In my free time, I enjoy watching Chinese TV, collecting song lyrics, and making Spotify <a href="https://open.spotify.com/user/2232mfikorkepi3hqhfpkgdhq" target="_blank" rel="noopener noreferrer">playlists</a>. I am fascinated by architecture and interior design and collect cool floor plans on a blog. One of my life ambitions is becoming Yelp Elite one day, but I figure my love for food trumps my critical insights nearly 100% of the time, so we will see about that.
             </div>
 
-            <div id="greeting">"{greetingText}"</div>
-            <div id="clock">{time.toLocaleTimeString()}</div>
+            <div>
+                <span>
+                <a href="https://www.instagram.com/rencewang/" target="_blank" rel="noopener noreferrer">Instagram &#x2197;</a>
+                <a href="https://www.linkedin.com/in/lawrence-c-w/" target="_blank" rel="noopener noreferrer">LinkedIn &#x2197;</a>
+                <a href="https://thoughts.rence.la/" target="_blank" rel="noopener noreferrer">Thoughts &#x2197;</a>
+                <a href="https://inmydefense.glitch.me/" target="_blank" rel="noopener noreferrer">In My Defense &#x2197;</a>
+                </span>
+            </div>
+
+            <div id="songs" className="mobile-hide">
+                Songs I've Been Listening To: 
+                <span> <Tracklist /> </span>
+            </div>
+
+            <div id="greeting" className="mobile-hide">{greetingText}</div>
+            <div id="clock" className="mobile-hide">{time.toLocaleTimeString()}</div>
         </section>
     )
 }

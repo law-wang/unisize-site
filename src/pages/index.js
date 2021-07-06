@@ -1,35 +1,75 @@
 import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Tracklist from "../components/tracklist"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
+const IndexPage = () => {
 
-    <section>
+  const data = useStaticQuery(graphql`
+  query {
+      blog: allMarkdownRemark (
+          filter: { frontmatter: { tag: {in: "Featured"}, type: {eq: "post"} } }
+          sort: { fields: [frontmatter___updated] order: DESC }
+      ) {
+          edges {
+              node {
+                  frontmatter {
+                      title
+                      permalink
+                      description
+                  }
+                  id
+              }
+          }
+      }
+      project: allMarkdownRemark (
+        filter: { frontmatter: { type: {eq: "project"} } }
+        sort: { fields: [frontmatter___updated] order: DESC }
+      ) {
+          edges {
+              node {
+                  frontmatter {
+                      title
+                      permalink
+                  }
+                  id
+              }
+          }
+      }
+  }`)
 
-      <h2>Things I Built</h2>
-      <div>
-        <div><a href="https://www.planneduniverse.com/">Planned Universe</a></div>
-        <div><a href="https://thoughts.rence.la/">Thoughts</a></div>
-        <div><a href="https://lyricsbyrence.glitch.me/">Lyrics by Rence</a></div>
-        <div><a href="https://inmydefense.glitch.me/">In My Defense</a></div>
-      </div>
+  return (
+    <Layout>
+      <SEO title="Home" />
 
-      <h2>Songs I Liked</h2>
-      <Tracklist />
+      <section>
 
-      <h2>Cool Things</h2>
-      <div><a href="https://youtu.be/iVQhkDZS_Tk" target="_blank" rel="noopener noreferrer">a dream</a></div>
-      <div><a href="https://youtu.be/kBF5l9rWQFs" target="_blank" rel="noopener noreferrer">a lesson on child-rearing</a></div>
-      <div><a href="https://www.vogue.com/fashion-shows/fall-2005-couture/christian-dior/slideshow/collection#11" target="_blank" rel="noopener noreferrer">Dior without Maria Grazia</a></div>
-      <div><a href="https://youtu.be/HUMygkRhB88" target="_blank" rel="noopener noreferrer">ASMR</a></div>
+        I'm interested in the intersection between computer science and design, as well as structures of economy and power. Currently studying Computer Science + Economics and Political Science at &#x2609; Yale. Aspiring to be someone who draws, codes, and writes.
 
-    </section>
+        <h2>I Build Things (For Fun, Most of the Time)</h2>
+        {data.project.edges.map(project => (
+          <div key={`one-of-${project.node.id}`}>
+            &#x219D; &nbsp; <Link to={project.node.frontmatter.permalink}>{project.node.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}</Link>
+          </div>
+        ))}
+        <div><Link to="/portfolio">All Projects</Link></div>
 
-  </Layout>
-)
+        <h2>I Also Write (Occasionally)</h2>
+        {data.blog.edges.map(post => (
+          <div key={`one-of-${post.node.id}`}>
+            &#x219D; &nbsp; <Link to={post.node.frontmatter.permalink}>{post.node.frontmatter.title.replace("&#58;", ":").replace("&amp;", "&")}</Link>
+            {/* <p>{post.node.frontmatter.description}</p> */}
+          </div>
+        ))}
+        <div><Link to="/blog">All Posts</Link></div>
+
+      </section>
+
+    </Layout>
+  )
+}
+
 
 export default IndexPage

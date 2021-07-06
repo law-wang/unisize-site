@@ -6,7 +6,7 @@ const Tracklist = () => {
     const client_secret = process.env.GATSBY_TRACKLIST_SECRET
 
     var Buffer = require('buffer/').Buffer
-    const loader = useRef(null)
+    // const loader = useRef(null)
     const [tracks, setTrack] = useState([])
 
     useEffect(async () => {
@@ -36,21 +36,19 @@ const Tracklist = () => {
 
         setTrack(track.items)
         
-        loader.current.style.opacity = 0
-        setTimeout(() => {
-            loader.current.style.display = "none"
-        }, 500)
+        // loader.current.style.opacity = 0
+        // setTimeout(() => {
+        //     loader.current.style.display = "none"
+        // }, 500)
 
     }, [])
 
     return (
         <div id="playlist">
-            <div id="loader" ref={loader}></div>
+            {/* <div id="loader" ref={loader}></div> */}
 
             {tracks.slice(0, 10).map((item, index) => (
-                <div key={index}>
-                    <a href={item.track.external_urls.spotify} target="_blank" rel="noopener noreferrer">{item.track.name}</a>
-                </div>
+                <a href={item.track.external_urls.spotify} key={index} target="_blank" rel="noopener noreferrer">{item.track.name}</a>
             ))}
         </div>
     )

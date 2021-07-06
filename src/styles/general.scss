@@ -25,9 +25,18 @@ $bodyFont: "Inter", sans-serif;
     font-size: 20px;
 }
 
+@media (max-width: 400px) {
+    * {
+        font-size: 16px;
+    }
+}
+
 a {
     text-decoration: none;
     color: $bodyColor;
+    &:active {
+        background-color: transparent;
+    }
 }
 
 button {
@@ -52,6 +61,12 @@ button {
     }
 }
 
+@media (max-width: 400px) {
+    button {
+        font-size: 16px;
+    }
+}
+
 h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 0;
 }
@@ -66,6 +81,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: auto;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
@@ -105,20 +121,13 @@ header {
     max-width: 700px;
     min-height: 100vh;
     margin: 0 10px;
-    padding: 100px 0 50px 0;
+    padding: 80px 0 50px 0;
 }
 
-#loader {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient($accentColor 0%, $backgroundColor 90%);
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
+.mobile-hide {
+    @media only screen and (max-width: 400px) {
+        display: none;
+    }
 }
 
 // MARKDOWN STYLES ****************************************************
