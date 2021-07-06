@@ -11,9 +11,30 @@ const ArtTemplate = props => {
 
     const imageQuery = useStaticQuery(graphql`
         query {
-            images: allFile(filter: { sourceInstanceName: { eq: "traditional" } }) {
+            traditional: allFile(filter: { sourceInstanceName: { eq: "traditional" } }) {
                 edges {
                     node {
+                        name
+                        childImageSharp {
+                            gatsbyImageData
+                        }
+                    }
+                }
+            }
+            design: allFile(filter: { sourceInstanceName: { eq: "design" } }) {
+                edges {
+                    node {
+                        name
+                        childImageSharp {
+                            gatsbyImageData
+                        }
+                    }
+                }
+            }
+            digital: allFile(filter: { sourceInstanceName: { eq: "digital" } }) {
+                edges {
+                    node {
+                        name
                         childImageSharp {
                             gatsbyImageData
                         }
@@ -23,14 +44,28 @@ const ArtTemplate = props => {
         }
     `)
 
-    const images = []
-    imageQuery.images.edges.map((data, index) => (
-        images.push(getImage(data.node))
+    const traditional = []
+    imageQuery.traditional.edges.map(data => (
+        traditional.push(getImage(data.node))
+    ))
+    const design = []
+    imageQuery.design.edges.map(data => (
+        design.push(getImage(data.node))
+    ))
+    const digital = []
+    imageQuery.digital.edges.map(data => (
+        digital.push(getImage(data.node))
     ))
 
-    console.log(imageQuery)
-    console.log(images)
-    console.log(images[0])
+    let images = []
+
+    if (pageTitle == "Traditional") {
+        images = traditional
+    } else if (pageTitle == "Design") {
+        images = design.reverse()
+    } else if (pageTitle == "Digital") {
+        images = digital.reverse()
+    }
 
     return (
         <Layout>
@@ -41,15 +76,15 @@ const ArtTemplate = props => {
                   <div><Link to="/art/traditional">Traditional</Link></div>        
                   <div><Link to="/art/digital">Digital</Link></div>
   
-              <main className="gallery-container">
+              <div className="gallery-container">
                   {images.map((data, index) => (
                       
-                    <div key={index}>
-                        <GatsbyImage image={data} alt="" />
+                    <div className="gallery-image" key={index}>
+                        <GatsbyImage image={data} alt={data.name} />
                     </div>
   
                   ))}
-              </main>
+              </div>
           </section>
         
         </Layout>

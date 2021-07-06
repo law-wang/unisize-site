@@ -3,7 +3,6 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Tracklist from "../components/tracklist"
 
 const IndexPage = () => {
 
@@ -46,7 +45,7 @@ const IndexPage = () => {
 
       <section>
 
-        I'm interested in the intersection between computer science and design, as well as structures of economy and power. Currently studying Computer Science + Economics and Political Science at &#x2609; Yale. Aspiring to be someone who draws, codes, and writes.
+        I'm interested in the intersection between computer science and design, as well as structures of economy and power. Currently studying Computer Science + Economics and Political Science at Yale. Aspiring to be someone who draws, codes, and writes.
 
         <h2>I Build Things (For Fun, Most of the Time)</h2>
         {data.project.edges.map(project => (
