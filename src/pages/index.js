@@ -63,7 +63,7 @@ const IndexPage = () => {
             {/* <p>{post.node.frontmatter.description}</p> */}
           </div>
         ))}
-        <div><Link to="/blog">All Posts</Link></div>
+        <div><Link to="/blog">All Writing</Link></div>
 
       </section>
 

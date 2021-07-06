@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
 
         <div className="navigation">
           <div>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/portfolio">Projects</Link>
           </div>
           &nbsp;
           <div>

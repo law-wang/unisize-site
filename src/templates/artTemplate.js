@@ -17,165 +17,119 @@ const ArtTemplate = props => {
 
     const images = useStaticQuery(graphql`
         query {
-            flashlight: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/flash.jpg"}) {
+            flashlight: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/flash.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            morphology: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/morph.jpg"}) {
+            morphology: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/morph.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            caged: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/caged.jpg"}) {
+            caged: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/caged.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            wave: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/wave.jpg"}) {
+            wave: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/wave.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            birth: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/birth.jpg"}) {
+            birth: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/birth.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            sunset: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/sunset.jpg"}) {
+            sunset: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/sunset.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            snow: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/mountain.jpg"}) {
+            snow: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/mountain.jpg"}) {
                 childImageSharp {
-                    fluid(quality: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            duality: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/duality.jpg"}) {
+            duality: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/duality.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            thunderclouds: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/thunder.jpg"}) {
+            thunderclouds: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/thunder.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            arches: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/traditional/arch.jpg"}) {
+            arches: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "traditional/arch.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            hill: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/design/hill.jpg"}) {
+            hill: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "design/hill.jpg"}) {
                 childImageSharp {
-                    fluid(quality: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            pros: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/design/pros.jpg"}) {
+            pros: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "design/pros.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            cup: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/design/cup.jpg"}) {
+            cup: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "design/cup.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            sketch: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/design/prosketch.jpg"}) {
+            sketch: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "design/prosketch.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            speaker: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/design/speaker.jpg"}) {
+            speaker: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "design/speaker.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            still: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/digital/still.jpg"}) {
+            still: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "digital/still.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            flux: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/digital/flux.jpg"}) {
+            flux: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "digital/flux.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            eternal: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/digital/eternal.jpg"}) {
+            eternal: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "digital/eternal.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            photon: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/digital/bird.jpg"}) {
+            photon: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "digital/bird.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            torus: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/digital/torus.jpg"}) {
+            torus: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "digital/torus.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            sorbet: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/digital/sorbet.jpg"}) {
+            sorbet: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "digital/sorbet.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            lover: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/digital/lover.gif"}) {
+            lover: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "digital/lover.gif"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
-            voxel: file(sourceInstanceName: {eq: "src"}, relativePath: {eq: "images/artimages/digital/voxel.jpg"}) {
+            voxel: file(sourceInstanceName: {eq: "art"}, relativePath: {eq: "digital/voxel.jpg"}) {
                 childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: CONSTRAINED)
                 }
             }
         }
@@ -185,13 +139,10 @@ const ArtTemplate = props => {
         <Layout>
         <SEO title={pageTitle}/>
         
-        <div className="content">
           <section className="gallery">
-              <div className="gallery-navigation bgcolor-changer">
                   <div><Link to="/art/design">Design</Link></div>
                   <div><Link to="/art/traditional">Traditional</Link></div>        
-                  <div><Link to="/art/digital">Digital</Link></div>        
-              </div>
+                  <div><Link to="/art/digital">Digital</Link></div>
   
               <main className="gallery-container">
                   <div className="grid">
@@ -202,7 +153,7 @@ const ArtTemplate = props => {
                               <a href={`#${data.item.id}`}>
                                   {/* <img className="red" src={data.item.path} /> */}
                                   <div className="red">
-                                    <StaticImage fluid={images[data.item.id].childImageSharp.fluid} style={{position: "inherit"}} />
+                                    <StaticImage fluid={images[data.item.id].childImageSharp} style={{position: "inherit"}} />
                                   </div>
                               </a>
                               <a href="#" className="lightbox" id={data.item.id}>
@@ -219,7 +170,6 @@ const ArtTemplate = props => {
                   </div>
               </main>
           </section>
-        </div>
         
         </Layout>
     )
