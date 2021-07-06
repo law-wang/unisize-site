@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
@@ -20,6 +20,7 @@ const ProjectPostTemplate = ({ data, pageContext }) => {
 
                 <h2>{title.replace("&#58;", ":").replace("&amp;", "&")}</h2>
                 <a href={link} target="_blank" rel="noreferrer">See It in Action &#x2197;</a>
+                <div><Link to="/portfolio">Back to All Projects</Link></div>
 
                 <div className="projectcontent">
                     <div dangerouslySetInnerHTML={{ __html: html }} />
