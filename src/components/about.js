@@ -108,7 +108,7 @@ const BlogFeatured = () => {
             <button onClick={closeAbout}>Close</button>
 
             <div>
-                I started building things some time ago. Exploring the intersection between design and code makes me feel powerful, and implementing design to create meaningful and useful products is more fulfilling than plain art. The liberal arts&#8482; education at Yale has afforded me the opportunity to discover economics and political science as immensely interesting, although what I will do with them remains to be seen.
+                I started building things some time ago. Exploring the intersection between design and code makes me feel powerful, and implementing design to create meaningful and useful products has been more fulfilling than my past dabbling in fine arts. The liberal arts&#8482; education at Yale has afforded me the opportunity to discover economics and political science as immensely interesting, although what I will do with them remains to be seen.
             </div>
 
             <div>
