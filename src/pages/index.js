@@ -45,7 +45,9 @@ const IndexPage = () => {
 
       <section>
 
-        I'm interested in the intersection between computer science and design, as well as structures of economy and power. Currently studying Computer Science + Economics and Political Science at Yale. Aspiring to be someone who draws, codes, and writes.
+         <div>
+          I'm interested in the intersection between computer science and design, as well as structures of economy and power. Currently studying Computer Science + Economics and Political Science at Yale. Aspiring to be someone who draws, codes, and writes.
+          </div>
 
         <h2>I Build Things (For Fun, Most of the Time)</h2>
         {data.project.edges.map(project => (
