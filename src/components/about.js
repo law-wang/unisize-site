@@ -117,10 +117,10 @@ const BlogFeatured = () => {
 
             <div>
                 <span>
-                <a href="https://www.instagram.com/rencewang/" target="_blank" rel="noopener noreferrer">Instagram &#x2197;</a>
-                <a href="https://www.linkedin.com/in/lawrence-c-w/" target="_blank" rel="noopener noreferrer">LinkedIn &#x2197;</a>
-                <a href="https://thoughts.rence.la/" target="_blank" rel="noopener noreferrer">Thoughts &#x2197;</a>
-                <a href="https://inmydefense.glitch.me/" target="_blank" rel="noopener noreferrer">In My Defense &#x2197;</a>
+                <a href="https://www.instagram.com/rencewang/" target="_blank" rel="noopener noreferrer">Instagram &#x2197;&#xFE0E;</a>
+                <a href="https://www.linkedin.com/in/lawrence-c-w/" target="_blank" rel="noopener noreferrer">LinkedIn &#x2197;&#xFE0E;</a>
+                <a href="https://thoughts.rence.la/" target="_blank" rel="noopener noreferrer">Thoughts &#x2197;&#xFE0E;</a>
+                <a href="https://inmydefense.glitch.me/" target="_blank" rel="noopener noreferrer">In My Defense &#x2197;&#xFE0E;</a>
                 </span>
             </div>
 

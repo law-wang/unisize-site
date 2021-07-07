@@ -19,7 +19,7 @@ const ProjectPostTemplate = ({ data, pageContext }) => {
             <article className="project">
 
                 <h2>{title.replace("&#58;", ":").replace("&amp;", "&")}</h2>
-                <a href={link} target="_blank" rel="noreferrer">See It in Action &#x2197;</a>
+                <a href={link} target="_blank" rel="noreferrer">See It in Action &#x2197;&#xFE0E;</a>
                 <div><Link to="/portfolio">Back to All Projects</Link></div>
 
                 <div className="projectcontent">

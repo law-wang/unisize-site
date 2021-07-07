@@ -22,7 +22,7 @@ $bodyFont: "Inter", sans-serif;
     -moz-user-select: none;
     -ms-user-select: none; 
     user-select: none;
-    -webkit-tap-highlight-color: $bodyColor; 
+    -webkit-tap-highlight-color: transparent; 
     font-size: 20px;
 }
 
@@ -47,6 +47,7 @@ button {
     font-size: 20px;
     font-family: $bodyFont;
     background-color: transparent;
+    -webkit-tap-highlight-color: transparent; 
     &:active {
         color: $bodyColor;
     }
@@ -193,6 +194,7 @@ a.footnote-ref {
 // PROJECT STYLES ****************************************************
 
 .projectcontent {
+    overflow-x: hidden;
     img {
         object-fit: cover;
         padding-bottom: 5px !important;
