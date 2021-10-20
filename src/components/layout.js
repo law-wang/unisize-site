@@ -21,26 +21,25 @@ const Layout = ({ children }) => {
     <main>
       
       <header>
-        {/* <div>
+        <div>
           <Link to="/"><b>Lawrence Wang</b></Link>
           <button onClick={showAbout}>
             About
           </button>
-        </div> */}
+        </div>
 
         <div className="navigation">
-          <nav>
-            <Link to="/three">info</Link>
-          </nav>
-          <nav>
-            <Link to="/portfolio">projects</Link>
-          </nav>
-          <nav>
-            <Link to="/blog">writing</Link>
-          </nav>
-          <nav>
-            <Link to="/art/traditional">art</Link>
-          </nav>
+          <div>
+            <Link to="/portfolio">Projects</Link>
+          </div>
+          &nbsp;
+          <div>
+            <Link to="/blog">Writing</Link>
+          </div>
+          &nbsp;
+          <div>
+            <Link to="/art/traditional">Art</Link>
+          </div>
         </div>
       </header>
 
@@ -52,7 +51,7 @@ const Layout = ({ children }) => {
 
       </div>
       
-      {/* <AboutBlock /> */}
+      <AboutBlock />
     </main>
   )
 }
